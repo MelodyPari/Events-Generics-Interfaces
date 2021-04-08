@@ -8,8 +8,10 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Event example");
-            BankAccount bankAccount = new BankAccount();
+            Console.WriteLine("Event and generic example");
+            BankAccount<Guid> bankAccount = new BankAccount<Guid>();
+            bankAccount.sessionId = Guid.NewGuid();
+            Console.WriteLine($"Session Id = {bankAccount.sessionId}");
             bankAccount.Notify += DisplayNotification;
             bankAccount.TakeMoney(100);
             bankAccount.AddMoney(5000);
@@ -66,8 +68,9 @@ namespace ConsoleApp1
     }
 
 
-    class BankAccount
+    class BankAccount<T> where T: IComparable<Guid>
     {
+        public T sessionId { get; set; }
         private float _balance = 0;
         public delegate void Handler(string message);
         public event Handler Notify;

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
-      "projectName": "ConsoleApp1",
-      "projectPath": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
+      "projectName": "ConsoleApp2",
+      "projectPath": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
       "packagesPath": "C:\\Users\\Bon-p\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\ConsoleApp1\\obj\\",
+      "outputPath": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\ConsoleApp2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bon-p\\AppData\\Roaming\\NuGet\\NuGet.Config",
