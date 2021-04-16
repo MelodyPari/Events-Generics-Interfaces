@@ -22,6 +22,8 @@ namespace ConsoleApp1
             Console.Read();
 
             Console.WriteLine();
+
+            //List<T> example
             Console.WriteLine("List<T> example");
             List<Employee> employes = new List<Employee>();
             employes.Add(new Employee() { Name = "Tom", Salary = 10000 });
@@ -42,8 +44,19 @@ namespace ConsoleApp1
             Console.Write("Only Ann salary:");
             var annSalary = employes.Where(e => e.Name == "Ann").Select(e => e.Salary).ToList();
             Console.WriteLine(annSalary[0]);
+
+            //Разница между:
+            var res1 = employes.Find(x => x.Name == "Ann");//Возвращает первый найденный в List элемент удовлетворяющий условию 
+            Console.WriteLine($"Name = {res1.Name}, Salary = {res1.Salary}"); //или дефолтное значение для типа (здесь null)
+
+            var res2 = employes.First(x => x.Name == "Ann");//Возвращает первый найденный элемент удовлетворяющий условию
+            Console.WriteLine($"Name = {res2.Name}, Salary = {res2.Salary}");//или вызывает exception
+
+            var res3 = employes.FirstOrDefault(x => x.Name == "Ann");////Возвращает первый найденный элемент удовлетворяющий условию 
+            Console.WriteLine($"Name = {res3.Name}, Salary = {res3.Salary}");//или дефолтное значение для типа (здесь null)
             Console.Read();
 
+            //Dictionary<T> example
             Console.WriteLine();
             Console.WriteLine("Dictionary<T> example");
             Dictionary<int,Employee> list = new Dictionary<int,Employee>();
@@ -54,6 +67,8 @@ namespace ConsoleApp1
             {
                 Console.WriteLine($"i = {l.Key} Name = {l.Value.Name}, Salary = {l.Value.Salary}");
             }
+
+          
             foreach (var l in list)
             {
                 if (l.Key == 2)
