@@ -9,13 +9,16 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             Console.WriteLine("Event and generic example");
-            BankAccount<Guid> bankAccount = new BankAccount<Guid>();
-            bankAccount.sessionId = Guid.NewGuid();
-            Console.WriteLine($"Session Id = {bankAccount.sessionId}");
+            BankAccount<Employee, int> bankAccount = new BankAccount<Employee, int>();
+            bankAccount.owner = new Employee() { Name = "Tom", Salary = 10000 };
+            bankAccount.limit = 10000000;
+
             bankAccount.Notify += DisplayNotification;
             bankAccount.TakeMoney(100);
             bankAccount.AddMoney(5000);
             bankAccount.TakeMoney(2500);
+            bankAccount.NotifyCount();
+ 
             Console.Read();
 
             Console.WriteLine();
@@ -68,9 +71,11 @@ namespace ConsoleApp1
     }
 
 
-    class BankAccount<T> where T: IComparable<Guid>
+    class BankAccount<T, T2> where T: class
+                             where T2: struct
     {
-        public T sessionId { get; set; }
+        public T owner;
+        public T2 limit;
         private float _balance = 0;
         public delegate void Handler(string message);
         public event Handler Notify;
@@ -91,6 +96,11 @@ namespace ConsoleApp1
                 Notify?.Invoke($"Balance = {_balance}");
             }
             else Notify?.Invoke("Operation denied");
+        }
+
+        public void NotifyCount()
+        {
+            Notify?.Invoke($"Count = {Notify.GetInvocationList().Length}");
         }
     }
 

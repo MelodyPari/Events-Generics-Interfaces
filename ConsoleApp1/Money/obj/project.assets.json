@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {
-      "Money/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/Money.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Money.dll": {}
-        }
-      }
-    }
+    ".NETCoreApp,Version=v3.1": {}
   },
-  "libraries": {
-    "Money/1.0.0": {
-      "type": "project",
-      "path": "../Money/Money.csproj",
-      "msbuildProject": "../Money/Money.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": [
-      "Money >= 1.0.0"
-    ]
+    ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
     "C:\\Users\\Bon-p\\.nuget\\packages\\": {}
@@ -32,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
-      "projectName": "ConsoleApp2",
-      "projectPath": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\ConsoleApp2\\ConsoleApp2.csproj",
+      "projectUniqueName": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\Money\\Money.csproj",
+      "projectName": "Money",
+      "projectPath": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\Money\\Money.csproj",
       "packagesPath": "C:\\Users\\Bon-p\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\ConsoleApp2\\obj\\",
+      "outputPath": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\Money\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bon-p\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,11 +33,7 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {
-            "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\Money\\Money.csproj": {
-              "projectPath": "C:\\Users\\Bon-p\\OneDrive\\Рабочий стол\\Events-Generics-Interfaces\\ConsoleApp1\\Money\\Money.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
