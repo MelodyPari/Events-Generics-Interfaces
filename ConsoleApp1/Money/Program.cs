@@ -9,25 +9,13 @@ namespace Money
             Console.WriteLine("Hello World!");
             Dollar d = new Dollar() { money = 5 };
             Ruble r = new Ruble() { money = 5 };
-            FindGreater(d, r);
-            Console.WriteLine(Sum(d, r));
-            Console.WriteLine(Diff(d, r));
+            Console.WriteLine(d > r);
+            Console.WriteLine((d+r).money);
+            Console.WriteLine((d-r).money);
         }
-        public static double Sum(Money money1, Money money2)
-        {
-            return money1.Convert() + money2.Convert();
-        }
-        public static double Diff(Money money1, Money money2)
-        {
-            return money1.Convert() - money2.Convert();
-        }
-        public static void FindGreater(Money money1, Money money2)
-        {
-            if (money1.Convert() > money2.Convert()) Console.WriteLine("first value greater");
-            if (money1.Convert() < money2.Convert()) Console.WriteLine("second value greater");
-            if (money1.Convert() < money2.Convert()) Console.WriteLine("second = first");
-        }
-
+        
+        
+       
     }
     public class Dollar : Money
     {
@@ -61,7 +49,23 @@ namespace Money
         public virtual double Convert()
         {
             return money;
-        }   
-        
+        }
+        public static Money operator +(Money money1, Money money2)
+        {
+            return new Money() { money = money1.Convert() + money2.Convert() };
+        }
+        public static Money operator -(Money money1, Money money2)
+        {
+            return new Money() { money = money1.Convert() - money2.Convert() };
+        }
+        public static bool operator >(Money money1, Money money2)
+        {
+            return money1.Convert() > money2.Convert();
+        }
+        public static bool operator <(Money money1, Money money2)
+        {
+            return money1.Convert() < money2.Convert();
+        }
+
     }
 }

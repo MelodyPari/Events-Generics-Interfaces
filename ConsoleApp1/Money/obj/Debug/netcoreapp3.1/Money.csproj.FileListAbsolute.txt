@@ -1,0 +1,12 @@
+C:\Users\Bon-p\OneDrive\Рабочий стол\Events-Generics-Interfaces\ConsoleApp1\Money\bin\Debug\netcoreapp3.1\Money.exe
+C:\Users\Bon-p\OneDrive\Рабочий стол\Events-Generics-Interfaces\ConsoleApp1\Money\bin\Debug\netcoreapp3.1\Money.deps.json
+C:\Users\Bon-p\OneDrive\Рабочий стол\Events-Generics-Interfaces\ConsoleApp1\Money\bin\Debug\netcoreapp3.1\Money.runtimeconfig.json
+C:\Users\Bon-p\OneDrive\Рабочий стол\Events-Generics-Interfaces\ConsoleApp1\Money\bin\Debug\netcoreapp3.1\Money.runtimeconfig.dev.json
+C:\Users\Bon-p\OneDrive\Рабочий стол\Events-Generics-Interfaces\ConsoleApp1\Money\bin\Debug\netcoreapp3.1\Money.dll
+C:\Users\Bon-p\OneDrive\Рабочий стол\Events-Generics-Interfaces\ConsoleApp1\Money\bin\Debug\netcoreapp3.1\Money.pdb
+C:\Users\Bon-p\OneDrive\Рабочий стол\Events-Generics-Interfaces\ConsoleApp1\Money\obj\Debug\netcoreapp3.1\Money.AssemblyInfoInputs.cache
+C:\Users\Bon-p\OneDrive\Рабочий стол\Events-Generics-Interfaces\ConsoleApp1\Money\obj\Debug\netcoreapp3.1\Money.AssemblyInfo.cs
+C:\Users\Bon-p\OneDrive\Рабочий стол\Events-Generics-Interfaces\ConsoleApp1\Money\obj\Debug\netcoreapp3.1\Money.csproj.CoreCompileInputs.cache
+C:\Users\Bon-p\OneDrive\Рабочий стол\Events-Generics-Interfaces\ConsoleApp1\Money\obj\Debug\netcoreapp3.1\Money.dll
+C:\Users\Bon-p\OneDrive\Рабочий стол\Events-Generics-Interfaces\ConsoleApp1\Money\obj\Debug\netcoreapp3.1\Money.pdb
+C:\Users\Bon-p\OneDrive\Рабочий стол\Events-Generics-Interfaces\ConsoleApp1\Money\obj\Debug\netcoreapp3.1\Money.genruntimeconfig.cache
