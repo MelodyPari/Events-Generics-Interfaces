@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Methods__Parameters__Properties
 {
@@ -23,16 +24,60 @@ namespace Methods__Parameters__Properties
                                            //Если компилятор находит подходящий метод, то прежде чем сгенерировать код его вызова, 
                                            //он генерирует код, создающий и заполняющий массив.
 
-            //Пример индексатора
-            var newUser = new AlsoUser();
-            newUser["name"] = "Jack";
-            newUser["lastname"] = "Daniel’s";
-            Console.WriteLine(newUser["name"] +" "+ newUser["lastname"]);
+            //Пример индексатора (2 индексатора)
+            var city = new City();
+            Console.WriteLine(city["Cardiff"] +" "+ city[2]);
+
+            //пример метода-расширения: вход - строка, выход строка + ! (Hello -> Hello!)
+            string h = "Hello";
+            Console.WriteLine(h.AddExclamationMark());
+
+            //пример ref/out
+            int a = 5;
+            int b = 10;
+            int c;
+            int d;
+            Add1(a, b, out c);
+            Console.WriteLine(c);
+            a = 10;
+            Add2(a, b, ref d);//Вызовет ошибку компиляции
+            Add2(a, b, ref c);//c - инициализирована при вызове метода add1 => ошибки не будет
+            Console.WriteLine(c);
+            a = 20;
+            var sum = Add3(a, b, ref c);
+            Console.WriteLine(c); // метод Add3 не меняет значение c, поэтому выводится то значение, что было до его вызова 
+
+
 
         }
-
+        public static void Add1(int a, int b, out int c)
+        {
+            //при использования ключевого слова out обязательно нужно в соответствующую переменную записать какое-нибудь значение
+            //так как out обозначает выходной параметр => ему может быть передана неинициализированная переменная
+           
+            c = a + b;
+        }
+        public static void Add2(int a, int b, ref int c)
+        {
+            //при использования ключевого слова ref, не обязательно изменять значение переменной
+            //так как c ref нельзя передать неинициализированную переменную
+            c = a + b;
+        }
+        public static int Add3(int a, int b, ref int c)
+        {
+            //при использования ключевого слова ref, не обязательно изменять значение переменной
+            //так как c ref нельзя передать неинициализированную переменную
+            return c > a + b ? a+b : c;
+        }
         public static void DoSomething(int firstvalue, params int[] secondvalue)
         { }
+    }
+    public static class StringExtension
+    {
+        public static string AddExclamationMark(this string str)
+        {
+            return str + "!";
+        }
     }
     class User
     {
@@ -45,36 +90,30 @@ namespace Methods__Parameters__Properties
         }
 
     }
-    class AlsoUser
+    class City
     {
-        string name;
-        string lastname;
+        
+        List<string> list = new List<string>() { "Bristol", "Cardiff", "Liverpool" };
 
         public string this[string param]
         {
+            set 
+            {
+                list.Add(param);
+            }
             get 
             {
-                switch (param)
-                {
-                    case "name": return $"Name = {name}";
-                    case "lastname": return $"Last Name = {lastname}";
-                    default: return "";
-                }
+                return list.IndexOf(param).ToString();
             }
-            set
+            
+        }
+        public string this[int param]
+        {
+            get
             {
-                switch (param)
-                {
-                    case "name":
-                        name = value;
-                        break;
-                    case "lastname":
-                        lastname = value;
-                        break;
-                    default: 
-                        break;
-                }
+                return list[param];
             }
+
         }
 
     }
